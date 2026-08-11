@@ -1,5 +1,5 @@
 ---
-import { siteConfig } from '../data/config';
+import { siteConfig } from "../data/config";
 ---
 
 <!-- Hero Section (Rounded Container) -->
@@ -18,16 +18,28 @@ import { siteConfig } from '../data/config';
 				>
 					{siteConfig.hero.title}
 				</h1>
-				<p
-					class="mb-8 text-xl md:text-2xl font-light text-white/90"
-				>
+				<p class="mb-2 text-xl md:text-2xl font-light text-white/90">
 					{siteConfig.hero.subtitle}
 				</p>
-				<a
-					href="#reservation"
-					class="btn bg-brand-primary hover:bg-brand-hover text-white border-none btn-lg rounded-full px-10 shadow-lg"
-					>Experience Now</a
-				>
+				{
+					siteConfig.hero.subSubtitle && (
+						<p class="mb-8 text-base md:text-lg font-light text-white/75">
+							{siteConfig.hero.subSubtitle}
+						</p>
+					)
+				}
+				<div class="gap-4 flex justify-center">
+					<a
+						href="#reservation"
+						class="btn bg-brand-primary hover:bg-brand-hover text-white border-none btn-lg rounded-full px-10 shadow-lg"
+						>Book a Table</a
+					>
+					<a
+						href="#menu"
+						class="btn btn-secondary bg-transparent hover:bg-brand-secondary text-white btn-lg rounded-full px-10 shadow-lg"
+						>Lihat Menu</a
+					>
+				</div>
 			</div>
 		</div>
 	</header>

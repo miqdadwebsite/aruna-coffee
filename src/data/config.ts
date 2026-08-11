@@ -2,11 +2,12 @@ export const siteConfig = {
   // Informasi Dasar
   brandName: "Aruna Coffee",
   siteTitle: "Aruna Coffee | Crafted with Passion",
-  
+
   // Hero Section
   hero: {
     title: "Aruna Coffee",
-    subtitle: "Where Every Sip Tells a Story",
+    subtitle: "Setiap Tegukan Punya Cerita",
+    subSubtitle: "Tempat untuk menikmati kopi, berbagi cerita, dan meluangkan waktu dengan secangkir kopi pilihan.",
     image: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=1920&h=1080",
   },
 

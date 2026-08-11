@@ -2,8 +2,9 @@
 const menuItems = [
 	{
 		title: "Aruna Latte",
+		price: "Rp 35.000",
 		description:
-			"Our classic espresso with perfectly steamed milk and a hint of homemade vanilla syrup.",
+			"Espresso klasik kami dengan susu kukus yang sempurna dan sentuhan sirup vanila buatan sendiri.",
 		image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=400&h=300",
 		badge: {
 			text: "Bestseller",
@@ -14,8 +15,9 @@ const menuItems = [
 	},
 	{
 		title: "24-Hour Cold Brew",
+		price: "Rp 40.000",
 		description:
-			"Steeped for a full day for a smooth, bold, and refreshing flavor profile with low acidity.",
+			"Diseduh selama sehari penuh untuk profil rasa yang halus, pekat, dan menyegarkan dengan tingkat keasaman rendah.",
 		image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=400&h=300",
 		badge: { text: "New", class: "badge-secondary border-none" },
 		tags: ["Iced Only"],
@@ -23,48 +25,54 @@ const menuItems = [
 	},
 	{
 		title: "Single Origin",
+		price: "Rp 45.000",
 		description:
-			"Experience the distinct tasting notes of our rotating seasonal beans, manually brewed.",
+			"Rasakan karakter rasa yang khas dari biji kopi musiman kami, diseduh secara manual.",
 		image: "https://images.unsplash.com/photo-1620189507195-68309c04c4d0?auto=format&fit=crop&q=80&w=400&h=300",
 		tags: ["V60", "Chemex"],
 		isHidden: false,
 	},
 	{
 		title: "Double Espresso",
+		price: "Rp 25.000",
 		description:
-			"A concentrated double shot of our house blend — bold, rich, and full of character.",
+			"Pekatnya double shot espresso dari house blend kami — berani, kaya rasa, dan penuh karakter.",
 		image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=400&h=300",
 		tags: ["Hot"],
 		isHidden: false,
 	},
 	{
 		title: "Matcha Latte",
+		price: "Rp 38.000",
 		description:
-			"Ceremonial grade matcha whisked to perfection, paired with creamy oat milk.",
+			"Matcha kualitas seremonial yang diaduk sempurna, dipadukan dengan susu oat yang creamy.",
 		image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=400&h=300",
 		tags: ["Hot", "Iced"],
 		isHidden: false,
 	},
 	{
 		title: "Butter Croissant",
+		price: "Rp 28.000",
 		description:
-			"Flaky, golden, and buttery. Baked fresh every morning in our kitchen.",
+			"Renyah, keemasan, dan buttery. Dipanggang segar setiap pagi di dapur kami.",
 		image: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?auto=format&fit=crop&q=80&w=400&h=300",
 		tags: ["Food"],
 		isHidden: false,
 	},
 	{
 		title: "Cappuccino",
+		price: "Rp 32.000",
 		description:
-			"Equal parts espresso, steamed milk, and velvety foam — a timeless classic.",
+			"Paduan seimbang antara espresso, susu kukus, dan busa lembut — minuman klasik yang tak lekang oleh waktu.",
 		image: "https://images.unsplash.com/photo-1571066811602-716837d681de?auto=format&fit=crop&q=80&w=400&h=300",
 		tags: ["Hot"],
 		isHidden: true,
 	},
 	{
 		title: "Almond Danish",
+		price: "Rp 30.000",
 		description:
-			"A delicate pastry layered with almond cream and topped with toasted almond flakes.",
+			"Pastry lembut berlapis krim almond dan ditaburi irisan almond panggang.",
 		image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=400&h=300",
 		tags: ["Food"],
 		isHidden: true,
@@ -106,6 +114,9 @@ const menuItems = [
 									</div>
 								)}
 							</h2>
+							<p class="text-lg font-medium text-brand-text/90 mt-1">
+								{item.price}
+							</p>
 							<p class="text-brand-text/70 mt-2">
 								{item.description}
 							</p>
