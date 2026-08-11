@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: cupcake;
+}
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  
+  --color-brand-primary: #8E5A35;
+  --color-brand-hover: #704426;
+  --color-brand-bg: #FAF8F5;
+  --color-brand-bg-alt: #F2ECE4;
+  --color-brand-text: #2C2621;
+}

@@ -1,0 +1,137 @@
+---
+
+---
+
+<!-- Ambience Section -->
+<section id="ambience" class="py-24 bg-brand-bg">
+	<div class="container mx-auto px-6 lg:px-12 max-w-7xl">
+		<div
+			class="divider text-4xl md:text-5xl font-serif font-bold text-brand-primary mb-12"
+		>
+			The Ambience
+		</div>
+
+		<!-- Carousel with Indicator Buttons (JS-driven) -->
+		<div class="relative w-full">
+			<div
+				id="ambience-carousel"
+				class="carousel w-full rounded-box shadow-2xl overflow-hidden"
+				style="height: 480px;"
+			>
+				<div class="carousel-item relative w-full shrink-0">
+					<img
+						src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200&h=480"
+						alt="Cafe interior"
+						class="w-full h-full object-cover"
+					/>
+					<div
+						class="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-black/60 to-transparent"
+					>
+					</div>
+					<p
+						class="absolute bottom-6 left-8 text-white font-serif text-xl font-medium"
+					>
+						Cozy Atmosphere
+					</p>
+				</div>
+				<div class="carousel-item relative w-full shrink-0">
+					<img
+						src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&q=80&w=1200&h=480"
+						alt="Coffee beans"
+						class="w-full h-full object-cover"
+					/>
+					<div
+						class="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-black/60 to-transparent"
+					>
+					</div>
+					<p
+						class="absolute bottom-6 left-8 text-white font-serif text-xl font-medium"
+					>
+						Premium Beans
+					</p>
+				</div>
+				<div class="carousel-item relative w-full shrink-0">
+					<img
+						src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&q=80&w=1200&h=480"
+						alt="Cozy seating"
+						class="w-full h-full object-cover"
+					/>
+					<div
+						class="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-black/60 to-transparent"
+					>
+					</div>
+					<p
+						class="absolute bottom-6 left-8 text-white font-serif text-xl font-medium"
+					>
+						Perfect Seating
+					</p>
+				</div>
+				<div class="carousel-item relative w-full shrink-0">
+					<img
+						src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=1200&h=480"
+						alt="Barista"
+						class="w-full h-full object-cover"
+					/>
+					<div
+						class="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-black/60 to-transparent"
+					>
+					</div>
+					<p
+						class="absolute bottom-6 left-8 text-white font-serif text-xl font-medium"
+					>
+						Skilled Baristas
+					</p>
+				</div>
+			</div>
+			<!-- Indicator Buttons -->
+			<div
+				id="carousel-indicators"
+				class="flex justify-center gap-2 mt-5"
+			>
+				<button
+					data-index="0"
+					class="carousel-dot btn btn-sm rounded-full w-9 h-9 min-h-0 text-white border-none font-semibold transition-all duration-300"
+					style="background-color: var(--color-brand-primary);"
+					>1</button
+				>
+				<button
+					data-index="1"
+					class="carousel-dot btn btn-sm rounded-full w-9 h-9 min-h-0 border-none font-semibold transition-all duration-300 opacity-50"
+					style="background-color: var(--color-brand-primary); color: white;"
+					>2</button
+				>
+				<button
+					data-index="2"
+					class="carousel-dot btn btn-sm rounded-full w-9 h-9 min-h-0 border-none font-semibold transition-all duration-300 opacity-50"
+					style="background-color: var(--color-brand-primary); color: white;"
+					>3</button
+				>
+				<button
+					data-index="3"
+					class="carousel-dot btn btn-sm rounded-full w-9 h-9 min-h-0 border-none font-semibold transition-all duration-300 opacity-50"
+					style="background-color: var(--color-brand-primary); color: white;"
+					>4</button
+				>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	const track = document.getElementById("ambience-carousel");
+	const dots = document.querySelectorAll<HTMLButtonElement>(".carousel-dot");
+
+	function goTo(index: number) {
+		if (!track) return;
+		const items = track.querySelectorAll<HTMLElement>(".carousel-item");
+		if (!items[index]) return;
+		track.scrollTo({ left: items[index].offsetLeft, behavior: "smooth" });
+		dots.forEach((dot, i) => {
+			dot.style.opacity = i === index ? "1" : "0.5";
+		});
+	}
+
+	dots.forEach((dot, i) => {
+		dot.addEventListener("click", () => goTo(i));
+	});
+</script>
