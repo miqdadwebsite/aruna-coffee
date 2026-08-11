@@ -1,4 +1,5 @@
 ---
+import { siteConfig } from '../data/config';
 ---
 
 <!-- Footer -->
@@ -25,12 +26,12 @@
 			></line><line x1="14" x2="14" y1="2" y2="4"></line></svg
 		>
 		<p class="font-medium text-sm md:text-base">
-			Copyright © {new Date().getFullYear()} Aruna Coffee - All right reserved
+			Copyright © {new Date().getFullYear()} {siteConfig.brandName} - All right reserved
 		</p>
 	</aside>
 	<nav class="flex items-center gap-6 text-brand-primary">
 		<a
-			href="#"
+			href={siteConfig.socials.twitter}
 			class="hover:text-brand-hover transition-colors"
 			aria-label="Twitter"
 		>
@@ -46,7 +47,7 @@
 			>
 		</a>
 		<a
-			href="#"
+			href={siteConfig.socials.youtube}
 			class="hover:text-brand-hover transition-colors"
 			aria-label="YouTube"
 		>
@@ -62,7 +63,7 @@
 			>
 		</a>
 		<a
-			href="#"
+			href={siteConfig.socials.facebook}
 			class="hover:text-brand-hover transition-colors"
 			aria-label="Facebook"
 		>

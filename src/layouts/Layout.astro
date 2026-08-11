@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { siteConfig } from '../data/config';
 ---
 <!doctype html>
 <html lang="en" data-theme="cupcake">
@@ -8,7 +9,7 @@ import '../styles/global.css';
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Aruna Coffee | Crafted with Passion</title>
+		<title>{siteConfig.siteTitle}</title>
 		
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
