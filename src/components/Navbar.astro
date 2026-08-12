@@ -1,19 +1,18 @@
 ---
-import { siteConfig } from '../data/config';
+import { siteConfig } from "../data/config";
 ---
 
 <div
 	class="navbar fixed top-0 z-50 bg-brand-bg/95 backdrop-blur-sm text-brand-text shadow-sm"
 >
 	<div class="flex-1">
-		<a
-			href="#"
-			class="btn btn-ghost text-2xl font-serif text-brand-primary"
+		<a href="/" class="btn btn-ghost text-2xl font-serif text-brand-primary"
 			>{siteConfig.brandName}</a
 		>
 	</div>
 	<div class="flex-none hidden md:flex">
 		<ul class="menu menu-horizontal px-1 font-medium">
+			<li><a href="#values">About Us</a></li>
 			<li><a href="#story">Our Story</a></li>
 			<li><a href="#menu">Menu</a></li>
 			<li><a href="#ambience">Ambience</a></li>
