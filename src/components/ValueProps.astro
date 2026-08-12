@@ -1,0 +1,74 @@
+---
+const values = [
+	{
+		title: "Kopi Spesialti",
+		description:
+			"Hanya biji kopi terbaik dengan skor di atas rata-rata dan profil rasa yang khas.",
+		icon: "M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8Zm6-5 1 3 2-2 2 3 3-3",
+	},
+	{
+		title: "Biji Kopi Pilihan",
+		description:
+			"Bersumber langsung dari petani lokal dengan proses seleksi yang ketat.",
+		icon: "M12 2c.5 2.5.5 5.5 0 8-1 3.5-1 6.5 0 9 1 2.5 1 5 0 6M12 2c-2.5 1.5-4 4-4 7s1.5 5.5 4 7 4-4 4-7-1.5-5.5-4-7Zm-9.9 9.5A8 8 0 0 1 12 5a8 8 0 0 1 9.9 6.5A8 8 0 0 1 12 18a8 8 0 0 1-9.9-6.5Z",
+	},
+	{
+		title: "Dipanggang Segar",
+		description:
+			"Dipanggang dalam jumlah kecil setiap minggu untuk menjaga kesegaran dan cita rasa.",
+		icon: "M12 2c1 4-1.5 6-1.5 9S12 15 12 18c0 2-1 4-3 4 0-2 1-3 1-5 0-2-2-3.5-2-6C6 9 8 6 8 3c2 1 3 3.5 4 5 .5-4 2-5 2-5 1.5 2 2 4 2 7 0 3-2 4.5-2 7 0 2 1 3 1 5-3 0-4-3-4-4 0-1 1-2 1-3.5C9.5 12 12 10 12 6c0-1.5-.5-3 0-4Z",
+	},
+	{
+		title: "Ruang yang Nyaman",
+		description:
+			"Sudut yang hangat untuk bekerja, bersantai, dan berkumpul bersama komunitas.",
+		icon: "M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3M2 11v6a2 2 0 0 0 2 2h2M2 11h20M22 11v6a2 2 0 0 1-2 2h-2M6 19v2M18 19v2M4 15h2M18 15h2",
+	},
+];
+---
+
+<!-- Value Proposition Section -->
+<section id="values" class="py-24 bg-brand-bg">
+	<div class="container mx-auto px-6 lg:px-12 max-w-7xl">
+		<div
+			class="divider text-4xl md:text-5xl font-serif font-bold text-brand-primary mb-16"
+		>
+			Mengapa Memilih Kami
+		</div>
+
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+			{
+				values.map((value) => (
+					<div
+						class="card bg-brand-bg-alt shadow-xl hover:-translate-y-2 transition-transform duration-300"
+					>
+						<div class="card-body items-center text-center">
+							<div
+								class="w-16 h-16 rounded-full bg-brand-primary/10 flex items-center justify-center mb-4"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="var(--color-brand-primary)"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="w-8 h-8"
+								>
+									<path d={value.icon} />
+								</svg>
+							</div>
+							<h2 class="card-title font-serif text-2xl text-brand-primary">
+								{value.title}
+							</h2>
+							<p class="text-brand-text/70 mt-2">
+								{value.description}
+							</p>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

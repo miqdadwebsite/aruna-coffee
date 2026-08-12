@@ -15,7 +15,7 @@ export const siteConfig = {
   contact: {
     waNumber: "6281234567890", // Format: kode negara (tanpa +) diikuti nomor. Contoh: 62812...
     address: "Jl. Kopi Kenangan No. 12, Jakarta Selatan, 12345",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0736!2d106.8277!3d-6.2607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14d30079f01%3A0x2e74f2341fff266f!2sJakarta%20Selatan%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1699000000000!5m2!1sid!2sid",
+    mapEmbedUrl: "https://maps.google.com/maps?q=Stadion%20Gelora%20Bandung%20Lautan%20Api&t=&z=14&ie=UTF8&iwloc=&output=embed",
   },
 
   // Waktu Operasional
