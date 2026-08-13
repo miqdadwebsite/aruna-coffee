@@ -1,5 +1,5 @@
 ---
-import { siteConfig } from '../data/config';
+import { siteConfig } from "../data/config";
 ---
 
 <!-- Location & Reservation Section -->
@@ -23,30 +23,26 @@ import { siteConfig } from '../data/config';
 				class="stats stats-vertical lg:stats-horizontal shadow-xl my-6 w-full bg-brand-bg text-brand-text"
 			>
 				<div class="stat">
-					<div
-						class="stat-title text-brand-text/70 font-semibold"
-					>
+					<div class="stat-title text-brand-text/70 font-semibold">
 						{siteConfig.hours.weekday.days}
 					</div>
-					<div
-						class="stat-value text-2xl text-brand-primary my-2"
-					>
+					<div class="stat-value text-2xl text-brand-primary my-2">
 						{siteConfig.hours.weekday.time}
 					</div>
-					<div class="stat-desc">{siteConfig.hours.weekday.notes}</div>
+					<div class="stat-desc">
+						{siteConfig.hours.weekday.notes}
+					</div>
 				</div>
 				<div class="stat">
-					<div
-						class="stat-title text-brand-text/70 font-semibold"
-					>
+					<div class="stat-title text-brand-text/70 font-semibold">
 						{siteConfig.hours.weekend.days}
 					</div>
-					<div
-						class="stat-value text-2xl text-brand-primary my-2"
-					>
+					<div class="stat-value text-2xl text-brand-primary my-2">
 						{siteConfig.hours.weekend.time}
 					</div>
-					<div class="stat-desc">{siteConfig.hours.weekend.notes}</div>
+					<div class="stat-desc">
+						{siteConfig.hours.weekend.notes}
+					</div>
 				</div>
 			</div>
 
@@ -86,15 +82,14 @@ import { siteConfig } from '../data/config';
 				<form id="reservation-form">
 					<div class="form-control mb-4">
 						<label class="label">
-							<span
-								class="label-text font-medium text-brand-text"
-								>Name</span
+							<span class="label-text font-medium text-brand-text"
+								>Nama</span
 							>
 						</label>
 						<input
 							type="text"
 							id="res-name"
-							placeholder="Your Name"
+							placeholder="Nama Anda"
 							class="input input-bordered focus:border-brand-primary focus:outline-brand-primary w-full bg-brand-bg-alt"
 							required
 						/>
@@ -102,9 +97,8 @@ import { siteConfig } from '../data/config';
 
 					<div class="form-control mb-4">
 						<label class="label">
-							<span
-								class="label-text font-medium text-brand-text"
-								>Date & Time</span
+							<span class="label-text font-medium text-brand-text"
+								>Tanggal & Waktu</span
 							>
 						</label>
 						<input
@@ -117,9 +111,8 @@ import { siteConfig } from '../data/config';
 
 					<div class="form-control mb-6">
 						<label class="label">
-							<span
-								class="label-text font-medium text-brand-text"
-								>Number of Guests</span
+							<span class="label-text font-medium text-brand-text"
+								>Jumlah Orang</span
 							>
 						</label>
 						<select
@@ -127,11 +120,13 @@ import { siteConfig } from '../data/config';
 							class="select select-bordered focus:border-brand-primary focus:outline-brand-primary w-full bg-brand-bg-alt"
 							required
 						>
-							<option disabled selected value="">Select guests</option>
-							<option value="10 People">10 People</option>
-							<option value="20 People">20 People</option>
-							<option value="30 People">30 People</option>
-							<option value="40+ People">40+ People</option>
+							<option disabled selected value=""
+								>Pilih Jumlah Orang</option
+							>
+							<option value="10 Orang">10 Orang</option>
+							<option value="20 Orang">20 Orang</option>
+							<option value="30 Orang">30 Orang</option>
+							<option value="40+ Orang">40+ Orang</option>
 						</select>
 					</div>
 
@@ -148,12 +143,17 @@ import { siteConfig } from '../data/config';
 	</div>
 </section>
 
-<script define:vars={{ waNumber: siteConfig.contact.waNumber, brandName: siteConfig.brandName }}>
+<script
+	define:vars={{
+		waNumber: siteConfig.contact.waNumber,
+		brandName: siteConfig.brandName,
+	}}
+>
 	const form = document.getElementById("reservation-form");
-	
+
 	form?.addEventListener("submit", (e) => {
 		e.preventDefault();
-		
+
 		const nameInput = document.getElementById("res-name");
 		const datetimeInput = document.getElementById("res-datetime");
 		const guestsSelect = document.getElementById("res-guests");
@@ -161,16 +161,16 @@ import { siteConfig } from '../data/config';
 		const name = nameInput.value;
 		const datetime = datetimeInput.value;
 		const guests = guestsSelect.value;
-		
+
 		// Format datetime to be more readable
 		const dateObj = new Date(datetime);
-		const formattedDate = dateObj.toLocaleString('id-ID', { 
-			weekday: 'long', 
-			year: 'numeric', 
-			month: 'long', 
-			day: 'numeric',
-			hour: '2-digit',
-			minute: '2-digit'
+		const formattedDate = dateObj.toLocaleString("id-ID", {
+			weekday: "long",
+			year: "numeric",
+			month: "long",
+			day: "numeric",
+			hour: "2-digit",
+			minute: "2-digit",
 		});
 
 		// Create WhatsApp message

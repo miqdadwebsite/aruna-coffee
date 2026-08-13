@@ -1,7 +1,7 @@
 export const siteConfig = {
   // Informasi Dasar
   brandName: "Aruna Coffee",
-  siteTitle: "Aruna Coffee | Crafted with Passion",
+  siteTitle: "Aruna Coffee",
 
   // Hero Section
   hero: {

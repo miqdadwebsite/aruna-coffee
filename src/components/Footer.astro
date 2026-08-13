@@ -12,8 +12,11 @@ import { siteConfig } from "../data/config";
 		<a href="/" class="text-3xl font-serif font-bold text-brand-primary"
 			>{siteConfig.brandName}</a
 		>
+		<p class="hidden md:block font-medium text-sm md:text-base w-3/5">
+			{siteConfig.contact.address}
+		</p>
 		<p class="font-medium text-sm md:text-base">
-			Copyright © {new Date().getFullYear()}
+			Copyright © {new Date().getFullYear() + " "}
 			{siteConfig.brandName} - All right reserved
 		</p>
 	</aside>
